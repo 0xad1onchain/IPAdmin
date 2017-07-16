@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12sp"
+    android:layout_marginLeft="12sp"
+    android:layout_marginRight="12sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tit_rec"
+            android:text="title"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="8dp"/>
+
+        <TextView
+            android:layout_below="@id/tit_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="12dp"
+            android:id="@+id/desc_rec"
+            android:text="desc "
+            android:textSize="18sp"
+            android:paddingLeft="12dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_below="@id/desc_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_rec"
+            android:textSize="18sp"
+            android:text="date"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_below="@id/date_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/type"
+            android:paddingRight="12dp"
+            android:textSize="18sp"
+            android:text="type"
+            android:paddingLeft="12dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_below="@id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eligibility_rec"
+            android:paddingRight="12dp"
+            android:textSize="18sp"
+            android:text="eligibility"
+            android:paddingLeft="12dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_below="@id/eligibility_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/city"
+            android:paddingRight="12dp"
+            android:textSize="18sp"
+            android:text="city"
+            android:paddingLeft="12dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/contact_rec"
+            android:text="contact"
+            android:textSize="18sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_rec"
+            android:text="Phone"
+            android:textSize="18sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
+
+        <TextView
+            android:text="Payment Mode"
+            android:textSize="18sp"
+            android:id="@+id/paymentMode_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="Price"
+            android:textSize="18sp"
+            android:id="@+id/price"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:src="@drawable/ic_favorite_border_black_48dp"
+            android:background="@null"
+            android:id="@+id/favorite"
+            android:tint="@color/text_grey"
+            android:layout_weight="2.03" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20.26"/>
+
+        <ImageButton
+            android:id="@+id/register"
+            android:scaleType="fitCenter"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:padding="12dp"
+            android:background="@null"
+            android:src="@drawable/briefcase"
+            android:tint="@color/text_grey" />
+
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:id="@+id/share"
+            android:tint="@color/text_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:src="@drawable/ic_share_variant_grey600_36dp"
+            android:padding="12dp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
