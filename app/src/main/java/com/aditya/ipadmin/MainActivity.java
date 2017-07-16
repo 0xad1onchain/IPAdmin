@@ -1,22 +1,18 @@
 package com.aditya.ipadmin;
 
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.PorterDuff;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,14 +27,18 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FirebaseApp.initializeApp(this);
+        FirebaseApp.initializeApp(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        userfEvents = mDatabase.child("Events");
+
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
+        userfEvents = mDatabase.child("Events");
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview_main);
         startFirebaseRecycler();
     }
