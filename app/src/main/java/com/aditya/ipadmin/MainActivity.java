@@ -26,16 +26,12 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private RecyclerView recyclerView;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         FirebaseApp.initializeApp(this);
         FirebaseApp.initializeApp(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         userfEvents = mDatabase.child("Events");
@@ -95,14 +91,15 @@ public class MainActivity extends AppCompatActivity {
 
                 event.addValueEventListener(new ValueEventListener() {
 
-
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Data value = dataSnapshot.getValue(Data.class);
-                        obj.date = value.date;
-                        obj.title = value.title;
-                        obj.description = value.description;
-                        obj.city = value.city;
+                        if(value != null){
+                            obj.date = value.date;
+                            obj.title = value.title;
+                            obj.description = value.description;
+                            obj.city = value.city;
+                        }
                     }
 
                     @Override
